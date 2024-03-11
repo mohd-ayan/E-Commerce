@@ -10,3 +10,12 @@ body
     /* margin-left: 5%;
     margin-right: 5%; */
 }
+
+.common-form
+ {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    text-align: center;
+    margin: auto;
+}

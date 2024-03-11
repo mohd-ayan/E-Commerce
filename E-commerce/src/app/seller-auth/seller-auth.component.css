@@ -1,0 +1,19 @@
+.sign-up {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    color: blueviolet;
+}
+
+.form-input {
+    height: 35px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.form-button {
+    height: 35px;
+    cursor: pointer;
+}
