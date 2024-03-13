@@ -41,6 +41,60 @@
       "name": "tony",
       "email": "tony@gmail.com",
       "Password": "12345"
+    },
+    {
+      "id": "37bc",
+      "name": "seller4",
+      "email": "seller4@gmail.com",
+      "Password": "12345"
+    },
+    {
+      "id": "9a12",
+      "name": "am",
+      "email": "am@gmail.com",
+      "Password": "12345"
+    },
+    {
+      "id": "63b2",
+      "name": "dqe",
+      "email": "fwe",
+      "Password": "fweg"
+    },
+    {
+      "id": "0e00",
+      "name": "ayann",
+      "email": "sf",
+      "Password": "1341"
+    },
+    {
+      "id": "93a3",
+      "name": "nm",
+      "email": "nm",
+      "Password": "12345"
+    },
+    {
+      "id": "a6f7",
+      "name": "a",
+      "email": "fg",
+      "Password": "32"
+    },
+    {
+      "id": "bbb4",
+      "name": "mk",
+      "email": "mk",
+      "Password": "1234"
+    },
+    {
+      "id": "d873",
+      "name": "kmm",
+      "email": "kmmm",
+      "Password": "1234"
+    },
+    {
+      "id": "8ece",
+      "name": "nm",
+      "email": "nm",
+      "Password": "134"
     }
   ]
 }
