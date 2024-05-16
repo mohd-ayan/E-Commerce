@@ -11,9 +11,11 @@ import { SignUp } from '../datatype';
 export class SellerAuthComponent implements OnInit {
 
   constructor(private sellerSer: SellerService,private router: Router) { }
-
+  Islogin:boolean=false
+  LoginIssueMessage:string=''
   ngOnInit(): void {
     this.sellerSer.reloadSeller()
+    
   }
 
   signUP(data:SignUp)
@@ -21,9 +23,26 @@ export class SellerAuthComponent implements OnInit {
     this.sellerSer.SellerSignUp(data)
   }
 
-  check(data:object)
+  login(data:any)
   {
-    console.log(data)
+    this.sellerSer.LoginSeller(data)
+    this.sellerSer.LoginIssuse.subscribe((result=>{
+      if(result==true)
+      {
+        this.LoginIssueMessage = 'Invalid Email Or Password'
+      }
+    }))
   }
+
+  showLogin()
+  {
+    this.Islogin = true
+  }
+
+  showSignUp()
+  {
+    this.Islogin = false
+  }
+
 
 }

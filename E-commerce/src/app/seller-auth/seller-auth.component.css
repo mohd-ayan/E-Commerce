@@ -17,3 +17,18 @@
     height: 35px;
     cursor: pointer;
 }
+
+.anchor-tag
+{
+    margin-top: 10px;
+    cursor: pointer;
+    color: blueviolet;
+}
+
+.anchor-tag:hover{
+    text-decoration-line: underline;
+}
+.login-issue
+{
+    color: red;
+}
