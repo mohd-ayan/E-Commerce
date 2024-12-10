@@ -1,0 +1,35 @@
+<p>parent works!</p>
+
+<app-child [data]="parentdata"></app-child>
+
+<div class="table-container">
+    <table >
+        <tr>
+            <th>id</th>
+            <th>availabilityStatus</th>
+            <th>brand</th>
+            <th>category</th>
+        </tr>
+        <tr *ngFor="let ele of Arraydata">
+            <td>{{ele.id}}</td>
+            <td>{{ele.availabilityStatus}}</td>
+            <td>{{ele.brand}}</td>
+            <td>{{ele.category}}</td>
+        </tr>
+    </table>
+</div>
+
+<form #login="ngForm" (ngSubmit)="onSubmit(login)">
+    <label >Name</label>
+    <input type="text" ngModel name="name">
+</form>
+
+<div>
+    <form [formGroup]="nameForm">
+    <label >A</label>
+    <input type="text" formControlName="name">
+    <label >b</label>
+    <input type="text" formControlName="email">
+    </form>
+    <button (click)="submit()">onSubmit</button>
+</div>

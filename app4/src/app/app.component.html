@@ -1,0 +1,26 @@
+<h1>App cpmponent</h1>
+
+<div>
+  <table style="border: 1px solid black;border-style: none;">
+    <thead>
+      <tr>
+        <th>Value</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of ser.getitems() | async; let i = index">
+        <td>{{ item }}</td>
+        <td>
+          <button (click)="ser.popOperation(i)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+
+  <!-- Add new value -->
+  <input [(ngModel)]="newValue" placeholder="Enter new value">
+  <button (click)="ser.pushOperation(this.newValue)">Add Value</button>
+</div>

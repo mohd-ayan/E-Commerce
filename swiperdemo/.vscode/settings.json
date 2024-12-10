@@ -1,0 +1,19 @@
+// {
+//     "powermode.enabled": true,
+//     "powermode.presets": "flames", // Applies flames/fire effect
+//     "powermode.shake.enabled": false, // Disables shake effect
+//     "powermode.explosion.enabled": true, // Enables explosion effect
+//     "powermode.enableImpact": false,  // Disables the percentage meter
+//     "powermode.combo.enabled": false, // Disables the combo counter (1x, 2x)
+
+
+
+    
+// }
+
+{
+    "powermode.enabled": true,
+    "powermode.presets": "flames", 
+    "powermode.shake.enabled": false, 
+    "powermode.combo.location": "off" // Disables the combo counter by setting the threshold to 0
+}

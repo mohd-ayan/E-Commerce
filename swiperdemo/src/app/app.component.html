@@ -1,0 +1,15 @@
+<swiper
+  [slidesPerView]="1"
+  [spaceBetween]="10"
+  [pagination]="{ clickable: true }"
+  [navigation]="true"
+>
+  <ng-container *ngFor="let slide of slides">
+    <ng-template swiperSlide>
+      <div class="slide" style="background-color: lightblue; height: 200px; display: flex; justify-content: center; align-items: center;">
+        Slide {{ slide }}
+      </div>
+    </ng-template>
+  </ng-container>
+</swiper>
+
