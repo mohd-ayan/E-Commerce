@@ -1,0 +1,44 @@
+<div  class="block h-[70px] w-[300px] ml-[30%] bg-gray-200" *ngIf="isWebcameShow">
+  <webcam [trigger]="triggerObservable" (imageCapture)="handleImage($event)"></webcam>
+  <img *ngIf="capturedImage" [src]="capturedImage" />
+  <button (click)="captureImage()" class="bg-green-600 rounded-md p-4">Capture</button>
+</div>
+
+<div class="w-4/5 mx-auto text-center">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Attendance Records</h2>
+    <div class="overflow-x-auto">
+      <table class="w-full border-collapse border border-gray-300 shadow-lg">
+        <thead>
+          <tr class="bg-blue-500 text-white">
+            <th class="p-3 border border-gray-300">Photo</th>
+            <th class="p-3 border border-gray-300">Name</th>
+            <th class="p-3 border border-gray-300">Date</th>
+            <th class="p-3 border border-gray-300">Status</th>
+            <th class="p-3 border border-gray-300">Punch Attendance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr  class="hover:bg-gray-100 transition">
+            <td class="p-3 border border-gray-300">
+              <img [src]="attendanceList.image" alt="{{ attendanceList.name }}" class="w-12 h-12 rounded-full mx-auto shadow-md" />
+            </td>
+            <td class="p-3 border border-gray-300 text-gray-700 font-medium">{{ attendanceList.name }}</td>
+            <td class="p-3 border border-gray-300 text-gray-600">{{ attendanceList.time | date:'short' }}</td>
+            <td class="p-3 border border-gray-300 font-semibold"
+                [ngClass]="{
+                  'text-green-600 ': attendanceList.status === 'Present',
+                  'text-red-600 ': attendanceList.status === 'Absent',
+                  'text-yellow-600 ': attendanceList.status === 'Late'
+                }">
+              {{ attendanceList.status }}
+            </td>
+            <td class="p-3 border border-gray-300 font-semibold"><button class="bg-sky-400 p-2 rounded-md" (click)="isWebcameShow = true;">Click</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+  

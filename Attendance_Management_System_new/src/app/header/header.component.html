@@ -1,0 +1,33 @@
+<header class="bg-blue-600 text-white py-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <div class="text-xl font-bold">
+        {{ismanager? 'Manager':'Staff' }} Panel
+      </div>
+      <nav>
+        <ul class="flex space-x-6">
+          <li *ngIf="ismanager">
+            <a routerLink="/roster"
+              class="hover:text-blue-300 transition-colors duration-200">
+              Roster
+            </a>
+          </li>
+          <li *ngIf="ismanager">
+            <a routerLink="/attendance"
+              class="hover:text-blue-300 transition-colors duration-200"
+            >
+              Attendance
+            </a>
+          </li>          
+          <li>
+            <a
+              routerLink="/login"
+              (click)="logout()"
+              class="hover:text-blue-300 transition-colors duration-200"
+            >
+              Logout
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>

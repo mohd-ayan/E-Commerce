@@ -1,0 +1,45 @@
+<div class="container mx-auto mt-8 p-1">
+  <div class="flex justify-end">
+    <button class="bg-blue-600 px-4 py-2 rounded-md text-white" (click)="OpenCreateDialog()">Create Roster</button>
+  </div>
+    <div class="p-4">
+      <h2 class="text-xl font-bold mb-4 ">Rosters List</h2>
+      <table class="table-auto w-full bg-white shadow-md rounded">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="px-4 py-2">Id</th>
+            <th class="px-4 py-2">Name</th>
+            <th class="px-4 py-2">Date</th>
+            <th class="px-4 py-2">Start Time</th>
+            <th class="px-4 py-2">End Time</th>
+            <th class="px-4 py-2">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let roster of rosters;let i =index" >
+            <td class="border px-4 py-2 ">{{ roster.id }}</td>
+            <td class="border px-4 py-2 ">{{ roster.name }}</td>
+            <td class="border px-4 py-2 ">{{ roster.date }}</td>
+            <td class="border px-4 py-2 ">{{ roster.start_time }}</td>
+            <td class="border px-4 py-2 ">{{ roster.end_time }}</td>
+            <td class="border px-4 py-2 flex justify-center gap-4">
+              <button
+                (click)="editRoster(roster)"
+                class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-1 px-2 rounded"
+              >
+                Edit
+              </button>
+              <button
+                (click)="deleteRoster(i)"
+                class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
